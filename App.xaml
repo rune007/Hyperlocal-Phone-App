@@ -1,0 +1,34 @@
+﻿<Application 
+    x:Class="HLApp.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"       
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:system="clr-namespace:System;assembly=mscorlib"
+    xmlns:nav="clr-namespace:System.Windows.Navigation;assembly=Microsoft.Phone">
+
+    <!--Application Resources-->
+    <Application.Resources>
+        <system:String x:Key="AppName">Hyperlocal</system:String>
+        <shell:ApplicationBar x:Key="GlobalAppMenuBar" IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBar.Buttons>
+                <shell:ApplicationBarIconButton x:Name="btnSearch" IconUri="/Resources/Icons/AppBar/appbar.feature.search.rest.png" Text="search" Click="btnSearch_Click"/>
+                <shell:ApplicationBarIconButton x:Name="btnNewsStream" IconUri="/Resources/Icons/AppBar/newsstream_white.png" Text="news stream" Click="btnNewsStream_Click"/>
+                <shell:ApplicationBarIconButton x:Name="btnNavigation" IconUri="/Resources/Icons/AppBar/navigation_white.png" Text="navigation" Click="btnNavigation_Click"/>
+                <shell:ApplicationBarIconButton x:Name="btnAddNews" IconUri="/Resources/Icons/AppBar/appbar.add.rest.png" Text="add news" Click="btnAddNews_Click"/>
+            </shell:ApplicationBar.Buttons>
+            <shell:ApplicationBar.MenuItems>
+                <!--<shell:ApplicationBarMenuItem Text="Contacts" Click="mnuContacts_Click"/>-->
+                <shell:ApplicationBarMenuItem Text="register for push notifications" Click="mnuRegister_Click"/>
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+    </Application.Resources>
+
+    <Application.ApplicationLifetimeObjects>
+        <!--Required object that handles lifetime events for the application-->
+        <shell:PhoneApplicationService 
+            Launching="Application_Launching" Closing="Application_Closing" 
+            Activated="Application_Activated" Deactivated="Application_Deactivated"/>
+    </Application.ApplicationLifetimeObjects>
+
+</Application>
