@@ -10,7 +10,7 @@ Hyperlocal - User generated news community
 In the project is being build a user generated news community focused on hyperlocal news for the country of Denmark. The project gives its users two kind of clients to interact with the applications: An ASP.NET MVC website and a Windows Phone application. The project is implemented on the Windows Azure cloud computing platform. The central data source for the clients is a WCF application. The project implements and explores basic Windows Azure concepts such as SQL Azure, Azure Table storage, Azure blob storage, Azure Queues and Azure Worker Roles. The project also explores and make use of SQL Azure spatial data types and methods.
 
 The Windows Phone App consumes Azure Backend listed below:  
-https://github.com/rune007/hyperlocal-azure-backend  
+https://github.com/rune007/hyperlocal-api-azure-backend  
 https://github.com/rune007/hyperlocal-website
 
 ![phone-screen-shots-y](https://user-images.githubusercontent.com/5253939/158077729-a2e3b618-ed0e-4667-8d57-f9909a9a0328.png)
